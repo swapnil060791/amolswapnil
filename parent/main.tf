@@ -5,6 +5,14 @@ module "resource_group" {
   resource_group_location = "centralindia"
 
 }
+#maine ek nay rg add kia h ticket k according to the requirement
+module "resource_group2" {
+  source = "../modules/azurerm_resource_group"
+
+  resource_group_name     = "sarrg2"
+  resource_group_location = "centralindia"
+
+}
 module "frontendpip" {
   depends_on              = [module.resource_group]
   source                  = "../modules/azurerm_pip"
