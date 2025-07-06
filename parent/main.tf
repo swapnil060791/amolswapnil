@@ -32,6 +32,14 @@ module "resource_group101" {
 
 }
 
+module "resource_group104" {
+  source = "../modules/azurerm_resource_group"
+
+  resource_group_name     = "rg-104"
+    resource_group_location = "centralindia"
+
+}
+  
 module "resource_group103" {
   source = "../modules/azurerm_resource_group"
 
