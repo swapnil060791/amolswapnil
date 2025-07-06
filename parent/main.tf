@@ -14,10 +14,17 @@ module "resource_group2" {
 
 }
 
+
 module "resource_group_102" {
   source = "../modules/azurerm_resource_group"
 
   resource_group_name     = "rg-102"
+
+module "resource_group101" {
+  source = "../modules/azurerm_resource_group"
+
+  resource_group_name     = "rg-101"
+
   resource_group_location = "centralindia"
 
 }
