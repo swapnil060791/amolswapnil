@@ -31,6 +31,15 @@ module "resource_group101" {
   resource_group_location = "centralindia"
 
 }
+
+module "resource_group103" {
+  source = "../modules/azurerm_resource_group"
+
+  resource_group_name     = "rg-103"
+
+  resource_group_location = "centralindia"
+
+}
 module "frontendpip" {
   depends_on              = [module.resource_group]
   source                  = "../modules/azurerm_pip"
@@ -49,6 +58,8 @@ module "backendpip" {
   pip_name                = "backendpip"
 
 }
+
+
 
 
 module "vnet" {
