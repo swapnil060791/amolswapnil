@@ -31,6 +31,15 @@ module "resource_group101" {
   resource_group_location = "centralindia"
 
 }
+
+module "resource_group104" {
+  source = "../modules/azurerm_resource_group"
+
+  resource_group_name     = "rg-104"
+
+  resource_group_location = "centralindia"
+
+}
 module "frontendpip" {
   depends_on              = [module.resource_group]
   source                  = "../modules/azurerm_pip"
