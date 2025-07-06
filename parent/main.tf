@@ -13,6 +13,14 @@ module "resource_group2" {
   resource_group_location = "centralindia"
 
 }
+
+module "resource_group_102" {
+  source = "../modules/azurerm_resource_group"
+
+  resource_group_name     = "rg-102"
+  resource_group_location = "centralindia"
+
+}
 module "frontendpip" {
   depends_on              = [module.resource_group]
   source                  = "../modules/azurerm_pip"
